@@ -1,0 +1,56 @@
+.wrapper
+
+  = render 'shared/side_bar'
+
+  .chat-main
+    .main-header
+      .left-header
+        .left-header__title
+          グループ名
+        %ul.left-header__members
+          Member：
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+      .right-header
+        .right-header__edit-btn
+          Edit
+    .messages
+      .message
+        .upper-info
+          .upper-info__user-name
+            メンバー名
+          .upper-info__date
+            2019/09/23
+        .lower-meesage
+          .lower-message__content
+            投稿メッセージ
+      .message
+        .upper-info
+          .upper-info__user-name
+            メンバー名
+          .upper-info__date
+            2019/09/23
+        .lower-meesage
+          .lower-message__content
+            投稿メッセージ
+      .message
+        .upper-info
+          .upper-info__user-name
+            メンバー名
+          .upper-info__date
+            2019/09/23
+        .lower-meesage
+          .lower-message__content
+            投稿メッセージ
+    .form
+      %form
+        %input.form__message{placeholder: 'type a message'}
+        .form__mask
+          %label.form__mask__image
+            = fa_icon 'picture-o', class: 'icon'
+            %input.hidden{type: 'file'}
+        %input.form__submit{type: 'submit', value: 'Send'}
