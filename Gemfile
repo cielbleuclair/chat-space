@@ -52,11 +52,15 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-#haml適応
+# haml適応
 gem 'haml-rails'
 
-#見た目
+# 見た目
 gem 'font-awesome-rails'
 
 # devise系
 gem 'devise'
+
+# 画像系
+gem 'carrierwave'
+gem 'mini_magick'
