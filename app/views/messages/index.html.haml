@@ -37,20 +37,14 @@
         .lower-meesage
           .lower-message__content
             投稿メッセージ
-      .message
-        .upper-info
-          .upper-info__user-name
-            メンバー名
-          .upper-info__date
-            2019/09/23
-        .lower-meesage
-          .lower-message__content
-            投稿メッセージ
+      .messages
+      = render @messages
+      
     .form
-      %form
-        %input.form__message{placeholder: 'type a message'}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .form__mask
-          %label.form__mask__image
+          = f.label :image, class: 'form__mask__image' do
             = fa_icon 'picture-o', class: 'icon'
-            %input.hidden{type: 'file'}
-        %input.form__submit{type: 'submit', value: 'Send'}
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
